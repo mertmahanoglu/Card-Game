@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+   
+    <a href="level1.html">LEVEL 1</a>
+    <a href="level2.html">LEVEL 2</a>
+    <a href="level3.html">LEVEL3</a>
+  </div>
+</div>
+
+<div class="container">
+    <h1>KART EŞLEŞTİRME OYUNU</h2>
+        <p>Oyun 3 seviyeden Oluşmaktadır. Bu seviyeler sırasıyla 2x5,3x6 ve 4x5 boyutlarında olacak şekilde kart sayısı içerir. </p>
+        <p>Oyun başlangıcında 2 saniye kartlar gösterilir ve ardından kapanır. Belirlenen süre içerisinde bütün kartları eşleştiremezseniz oyunu kaybedersiniz</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Oynamak için TIKLAYIN</span>
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+     
+</body>
+</html>
