@@ -1,0 +1,244 @@
+
+/*  Kart oyununun kod kaynağı https://www.youtube.com/watch?v=4BOSWPnC9Uk*/
+
+body {
+    background: #FFEAC9;
+    color: white;
+    font-family: arial;
+  }
+  body header {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  @media screen and (min-width: 37.4375em) {
+    body header {
+      width: 1000px;
+    }
+  }
+  
+  body header .timer {
+    position: absolute;
+    top: 14%;
+    left: 35%;
+    font-size: 23px;
+    background: #FFAD29;
+    width: 8vh;
+    height: 8vh;
+    line-height: 8vh;
+    border-radius: 4vh;
+    text-align: center;
+  }
+  
+  body header .score {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    font-size: 23px;
+    background: #000000;
+    width: 20vh;
+    height: 8vh;
+    line-height: 8vh;
+    border-radius: 4vh;
+    text-align: center;
+  }
+  
+  
+  
+  
+  .oyun {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 37.4375em) {
+    .oyun {
+        width: 1000px;
+      margin: 0 300px;
+    }
+  }
+  
+  .card {
+    perspective: 1000;
+    height: 20%;
+    margin: 1%;
+    cursor: pointer;
+  }
+  
+  .card.flip .card-flip {
+    transform: rotateY(180deg);
+  }
+  
+  .card, .on, .arka {
+    width: 13%;
+    float: left;
+    border-radius: 12px;
+  }
+  
+  .card-flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    height: 100%;
+    position: relative;
+  }
+  .card-flip .on, .card-flip .arka {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: #FFCCA9 0 8px 2px;
+  }
+  .card-flip .on {
+    transform: rotateY(0deg);
+    background: #59f573;
+  }
+  .card-flip .arka {
+    transform: rotateY(180deg);
+    border: 1px solid #E8E8E8;
+  }
+  
+  
+  
+  #queen {
+    background: white url("chess/queen.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #king {
+    background: white url("chess/king.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #bishop {
+    background: white url("chess/bishop.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #rook {
+    background: white url("chess/rook.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #knight {
+    background: white url("chess/knight.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #pawn {
+    background: white url("chess/pawn.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #beyazsah {
+    background: white url("chess/whitequeen.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #beyazvezir {
+    background: white url("chess/whiteking.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #beyazkale {
+    background: white url("chess/whiterook.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  #beyazfil {
+    background: white url("chess/whitebishop.png") no-repeat center;
+    background-size: contain;
+  }
+
+   
+  #beyazat {
+    background: white url("chess/whiteknight.png") no-repeat center;
+    background-size: contain;
+  }
+
+   
+  #beyazpiyon {
+    background: white url("chess/whitepawn.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  
+  
+  
+  /*Tam ekran navigation css kaynağı https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp*/
+  
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background-image: url(cool-background.png);
+    text-align: center;
+  }
+  
+  .container{
+    margin-top:250px;
+  }
+  
+  h1 
+  { color: #fff; font-family: 'Righteous', cursive; font-size: 65px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; text-shadow: 2px 2px 0 #000; margin: 10px 0 24px; text-align: center; }
+  
+  
+  
+  
+  p { color: #f6f6f6; font-family: 'Orienta', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; text-align: center; }
+  span{ color: #f6f6f6; font-family: 'Orienta', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; text-align: center; }
+  
+  
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
