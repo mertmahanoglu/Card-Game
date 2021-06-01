@@ -13,6 +13,7 @@ body {
     position: relative;
   }
 
+  /*media --> screen bilgisayarda görüntülenmesi içindir.*/
   @media screen and (min-width: 37.4375em) {
     body header {
       width: 600px;
@@ -54,6 +55,7 @@ body {
     position: relative;
     margin: 0 auto;
   }
+    /*media --> screen bilgisayarda görüntülenmesi içindir.*/
   @media screen and (min-width: 37.4375em) {
     .oyun {
       width: 800px;
@@ -67,6 +69,7 @@ body {
     cursor: pointer;
   }
   
+  /*Kartın ön yüzünü çevirerek gösteriyoruz*/
   .card.flip .card-flip {
     transform: rotateY(180deg);
   }
@@ -77,12 +80,16 @@ body {
     border-radius: 12px;
   }
   
+
+  /*Transform-style özelliği, yuvalanmış öğelerin 3D alanda nasıl işleneceğini belirtir.*/
   .card-flip {
     transition: 0.6s;
     transform-style: preserve-3d;
     height: 100%;
     position: relative;
   }
+
+  /*backface-visibility özelliği, bir elemanın arka yüzünün kullanıcıya bakarken görünüp görünmeyeceğini tanımlar.*/
   .card-flip .on, .card-flip .arka {
     backface-visibility: hidden;
     position: absolute;
@@ -92,10 +99,15 @@ body {
     width: 100%;
     box-shadow: #FFCCA9 0 8px 2px;
   }
+
+  /*Kartın ön yüzünü çevirerek kapatıyoruz*/
+
   .card-flip .on {
     transform: rotateY(0deg);
     background: #59f573;
   }
+
+    /*Kartın arka yüzünü çevirerek gösteriyoruz*/
   .card-flip .arka {
     transform: rotateY(180deg);
     border: 1px solid #E8E8E8;
@@ -151,7 +163,7 @@ body {
 p { color: #f6f6f6; font-family: 'Orienta', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; text-align: center; }
 span{ color: #f6f6f6; font-family: 'Orienta', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; text-align: center; }
 
-  
+  /*z-index özelliği, bir öğenin yığın sırasını belirtir.*/
   .overlay {
     height: 0%;
     width: 100%;
@@ -192,6 +204,9 @@ span{ color: #f6f6f6; font-family: 'Orienta', sans-serif; font-size: 16px; line-
     right: 45px;
     font-size: 60px;
   }
+
+  /*overflow-y özelliği, içeriğin kırpılıp kırpılmayacağını, kaydırma çubuğu eklenip eklenmeyeceğini veya blok düzeyinde bir öğenin üst 
+  ve alt kenarlarından taştığında taşma içeriğinin görüntülenip görüntülenmeyeceğini belirtir.*/
   
   @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}

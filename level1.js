@@ -162,8 +162,9 @@ $(document).ready(function() {
                   }
                   
                   running = true;
-                  
+                  //this=card
                   seciliKartlar[0] = $(this).find('.arka').attr('id');//Hiçbir kart seçilmemişse seçilen ilk kartı bu diziye  at
+                
                   $(this).toggleClass('flip');//CSS ile çevir
                   
                   running = false;
@@ -176,6 +177,7 @@ $(document).ready(function() {
                   running = true;
                   
                   seciliKartlar[1] = $(this).find('.arka').attr('id');//Bir kart seçilmemişse ve ikinci kart seçilmemişse seçilen ikinci kartı bu diziye at
+                
                   $(this).toggleClass('flip');//CSS ile çevir
           
                   //Seçilen kartlar aynıysa doğru bilmiştir
